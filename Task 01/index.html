@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Task 01 - Joel Rodriguez</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h1>Task 01 - Joel Rodriguez</h1>
+    <h2>Operations: sum, getMax, getMin, getAverage</h2>
+    <p id="demo">Please introduce the Numbers, by using the next format: x,y,z,...,n</p>
+    <p>Numbers: <input id="numbers" value="1,2,3,89,290"><br></p>
+    <p><button type="button" onclick="myAuxiliaryFunction()">Calculate</button></p>
+    <p>MIN value is: <input id="min"><br></p>
+    <p>MAX value is: <input id="max"><br></p>
+    <p>AVERAGE value is: <input id="average"><br></p>
+    <p>TOTAL value is: <input id="total"><br></p>
+    <h3>Fuctions</h3>
+    <p><button type="button" onclick="minFunc()">Min</button>
+    <button type="button" onclick="maxFunc()">Max</button>
+    <button type="button" onclick="averageFunc()">Average</button>
+    <button type="button" onclick="totalFunc()">Sum</button>
+    <p>Function: <textarea id="Func" cols="60" rows="20"></textarea></p>
+    <script>
+        function myAuxiliaryFunction() {
+            var x = JSON.parse("[" + document.getElementById("numbers").value + "]");
+            var response = doOperations(x);
+            document.getElementById("min").value = response[0];
+            document.getElementById("max").value = response[1];
+            document.getElementById("average").value = response[2];
+            document.getElementById("total").value = response[3];
+        }
+        function minFunc() {
+            document.getElementById("Func").value = getMin;
+        }
+        function maxFunc() {
+            document.getElementById("Func").value = getMax;
+        }
+        function averageFunc() {
+            document.getElementById("Func").value = getAverage;
+        }
+        function totalFunc() {
+            document.getElementById("Func").value = sum;
+        }
+    </script>
+</body>
+</html>

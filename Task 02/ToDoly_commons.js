@@ -78,7 +78,7 @@ module.exports.getUser = function(user){
         .addHeaders({'Authorization':'Basic '+ user});
 };
 
-module.exports.updateUser = function(user, Pid){
+module.exports.updateUser = function(user){
     var userData =
     {
         "Email": email,
@@ -138,7 +138,7 @@ module.exports.getDoneItemsOfaFilter = function(user, Fid){
         .addHeaders({'Authorization':'Basic '+ user});
 };
 
-module.exports.getAllItems = function(user, Fid){
+module.exports.getAllItems = function(user){
     return frisby.create('Get All Items')
         .get('https://todo.ly/api/items.json')
         .addHeaders({'Authorization':'Basic '+ user});

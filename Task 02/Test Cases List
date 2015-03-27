@@ -1,0 +1,8 @@
+Smoke Test:
+1: Verify Get all Projects is available
+2: Verify Get Token is available
+3: Verify Get User IDs is available
+4: Verify Get List of Filters is available
+5: Verify Get All Items is available
+6: Verify IsAuthenticated is available
+

@@ -7,7 +7,6 @@ Smoke Test:
     Verify deleteUser method is available
     Verify getAllItems method is available
     Verify getAllProjects method is available
-    Verify getAllProjects method is available
     Verify getDoneItemsOfaFilter method is available
     Verify getDoneItemsOfProjectByID method is available
     Verify getFilters method is available
@@ -23,3 +22,25 @@ Smoke Test:
     Verify updateItemByID method is available
     Verify updateProjectByID method is available
     Verify updateUser method is available
+
+Sanity Test:
+    Verify New Item is created with createNewItem method
+    Verify Update Project with updateProjectByID method
+    Verify Get Token method returns TokenString, UserEmail and ExpirationTime referred to the user
+    Verify User Authentication with isAuthenticated method
+    Verify Update User with updateUser method
+    Verify Get User Detail with getUser method
+    Verify Get Project Detail with getProjectByID method
+
+CRUD Test
+    Verify Create a New User
+    Verify Get All filters
+    Verify Update Project
+    Verify Delete Item
+    Verify Get All Projects
+
+Negative Test Cases
+    Verify error is returned Creating a New User with empty values
+    Verify error is returned retrieving All filters with wrong authentication code
+    Verify error is returned Updating Project with wrong ID
+    Verify error is returned Deleting Item with wrong ID

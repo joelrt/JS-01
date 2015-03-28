@@ -33,7 +33,7 @@ module.exports.updateProjectByID = function(user, Pid){
     var now = new Date();
     var updateData =
     {
-        "Content": "Project " + now.getTime(),
+        "Content": "Update" + now.getTime(),
         "Icon": "4"
     };
     return frisby.create('Update Projects By ID')
@@ -79,11 +79,10 @@ module.exports.getUser = function(user){
 };
 
 module.exports.updateUser = function(user){
+    var now = new Date();
     var userData =
     {
-        //"Email": email,
-        //"FullName": uname,
-        //"Password": password
+        "FullName": 'Name'+ now.getTime()
     };
     return frisby.create('Update User')
         .put('https://todo.ly/api/user/0.json', userData, {json: true})

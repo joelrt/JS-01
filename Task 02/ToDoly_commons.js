@@ -81,9 +81,9 @@ module.exports.getUser = function(user){
 module.exports.updateUser = function(user){
     var userData =
     {
-        "Email": email,
-        "FullName": uname,
-        "Password": password
+        //"Email": email,
+        //"FullName": uname,
+        //"Password": password
     };
     return frisby.create('Update User')
         .put('https://todo.ly/api/user/0.json', userData, {json: true})
